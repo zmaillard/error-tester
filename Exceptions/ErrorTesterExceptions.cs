@@ -7,4 +7,10 @@ namespace error_tester.Exceptions
         public ErrorTesterExceptions (string message, System.Exception inner) : base (message, inner) { }
 
     }
+
+    public class IgnoreApplicationException : ErrorTesterExceptions {
+        public IgnoreApplicationException () { }
+        public IgnoreApplicationException (string message) : base (message) { }
+        public IgnoreApplicationException (string message, System.Exception inner) : base (message, inner) { }
+    }
 }

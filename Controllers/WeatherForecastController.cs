@@ -27,6 +27,7 @@ namespace error_tester.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            NewRelic.Api.Agent.NewRelic.SetTransactionName("Custom", "Weather Transaction");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
@@ -46,6 +47,14 @@ namespace error_tester.Controllers
                 //NewRelic.Api.Agent.NewRelic.NoticeError(ex);
                 return StatusCode(400);
             }
+
+            return Ok(new {status = "True"});
+        }
+
+        [HttpGet("Ignored")]
+        public IActionResult Ignored() {
+
+            throw new IgnoreApplicationException();
 
             return Ok(new {status = "True"});
         }
