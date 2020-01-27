@@ -13,4 +13,4 @@ Installation
 2. Open newrelic.config file in text editor.  Replace `YOUR_KEY_NAME` with the NewRelic license code.  Replace `YOUR_APP_NAME` with the name of your application as it will appear in the New Relic window.
 3. On command prompt in the root directory of this repository run `docker-compose up` to start the application.
 
-https://asciinema.org/a/CxQQwkXwS9d7H4JEuCqjktIxT
+[![asciicast](https://asciinema.org/a/CxQQwkXwS9d7H4JEuCqjktIxT.svg)](https://asciinema.org/a/CxQQwkXwS9d7H4JEuCqjktIxT)
